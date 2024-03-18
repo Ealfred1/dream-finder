@@ -1,4 +1,4 @@
-
+import 'primeicons/primeicons.css'
 
 const NavBar = () => {
 	return (
@@ -9,7 +9,7 @@ const NavBar = () => {
 
 			<div className="search-bar-icon">
 				{/* A primereact icon goes here or a box-icon but styled */}
-				<span className="text-2xl text-white">Q</span>
+				<span className="text-2xl text-white"><span className="pi pi-spin pi-cog"></span></span>
 			</div>
 		</div>
 	)
