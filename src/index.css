@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+
+@layer component {
+	body {
+		@apply bg-slate-800;
+	}
+
+	.navbar {
+	  border-bottom: 5px solid transparent;
+      border-image: linear-gradient(to right, yellow, rgb(168, 85, 247));
+      border-image-slice: 5;
+      background-clip: padding-box;
+	}
+
+	.tt {
+		transform: scale(1.4);
+		transition: all 0.3s ease-in-out;
+	}
+
+	.tt:hover {
+		transform: scale(1);
+	}
+
+	.logo {
+		@apply text-2xl md:text-3xl font-semibold md:font-bold;
+		background-clip: text;
+	    -webkit-background-clip: text;
+	    color: transparent;
+	    background-image: linear-gradient(to right, yellow, rgb(168, 85, 247));
+	}
+
+	.gradient {
+		background-clip: text;
+	    -webkit-background-clip: text;
+	    color: transparent;
+	    background-image: linear-gradient(45deg, yellow, rgb(168, 85, 247));
+	}
+
+
+	.navbar::after {
+	  content: "";
+	  position: absolute;
+	  bottom: -1px; /* Adjust the position of the curve */
+	  left: 50%;
+	  width: 70%; /* Adjust the width of the line */
+	  height: 1px; /* Adjust the thickness of the line */
+	  border-top-left-radius: 50%;
+	  border-top-right-radius: 50%;
+	  transform: translateX(-50%) rotate(180deg);
+	  @apply bg-[yellow];
+	}
+
+
+}
