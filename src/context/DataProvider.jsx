@@ -10,7 +10,7 @@ export const DataProvider = ({ children }) => {
 	const getDreams = async () => {
 
 		try {
-			const response = await axios.get('http://localhost:8000/api/')
+			const response = await axios.get('http://dream-dict.onrender.com/api/')
 			setDreamsData(response.data)
 		} catch (error) {
 			console.log('error', error)
